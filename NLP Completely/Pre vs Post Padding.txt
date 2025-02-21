@@ -1,0 +1,6 @@
+Pre-padding is generally considered better than post-padding for most applications, particularly in machine learning and deep learning, for these reasons:-
+1. Temporal Alignment: Pre-padding preserves the alignment of the original sequence by placing padding at the start. This ensures that the sequence's meaningful elements align consistently when processing sequences of different lengths.
+
+2. Compatibility with Models: Recurrent Neural Networks (RNNs), such as LSTMs or GRUs, process sequences from the start to the end. Pre-padding keeps the later parts of the sequence (which may contain more recent or relevant information) accessible to the model without interference.
+
+3. Ease of Truncation: When using fixed-length inputs, pre-padding allows truncation(process of shortening a sequence) from the end of the sequence, reducing the risk of discarding meaningful data at the beginning.
